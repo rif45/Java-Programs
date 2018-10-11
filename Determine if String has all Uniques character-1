@@ -1,0 +1,46 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class UniqueCharacter
+{
+		boolean uniqueChar(String str)
+		{
+			boolean result = true;
+			
+			for(int i =0;i<str.length();i++)
+			{
+				for(int j=i+1;j<str.length()-1;j++)
+				{
+					if(str.charAt(i)==str.charAt(j))
+					{
+						result=false;
+						break;
+					}
+				}
+			}
+			return result;
+		}
+		
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		UniqueCharacter uc = new UniqueCharacter();
+		Scanner sc = new Scanner(System.in);
+		String input = sc.next();
+		boolean output = uc.uniqueChar(input);
+		
+		if(output)
+		{
+			System.out.println("Given String has All Unique Character");
+		}
+		else
+		{
+			System.out.println("Given String has Repeated Character");
+		}
+		
+	
+	}
+}
