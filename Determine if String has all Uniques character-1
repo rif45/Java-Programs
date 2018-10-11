@@ -1,10 +1,12 @@
-/* package whatever; // don't place package name! */
+/*question : Determine if a string has all unique Characters */
+/* brute force Technique : run 2 loop and compare if at any point str[i] is equal to str[j] return false else return true */
+/* Time complexity : O(n^2) : n=length of string */
 
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-/* Name of the class has to be "Main" only if the class is public. */
+
 class UniqueCharacter
 {
 		boolean uniqueChar(String str)
