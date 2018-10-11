@@ -1,0 +1,49 @@
+/* Determine if string has all unique character*/
+/* Approach 3 : using Hashset */
+/* Time complexity : O(n) */
+
+import java.util.*; 
+import java.lang.*; 
+import java.io.*; 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+
+
+class UniqueCharacter
+	{
+		boolean uniqueChar(String str)
+		{
+			boolean result = true;
+			HashSet <Character> charset = new HashSet();
+			for(int i =0;i<str.length();i++)
+			{
+				result = charset.add(str.charAt(i));
+				{
+					if(result==false)
+					{
+						break;
+					}
+				}
+			}
+			return result;
+		}
+	
+
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		UniqueCharacter uc = new UniqueCharacter();
+		Scanner sc = new Scanner(System.in);
+		String str = sc.next();
+		
+		if(uc.uniqueChar(str))
+		{
+			System.out.println("Given string has all unique character");
+		}
+		else
+		{
+			System.out.println(" Given String has Repeated Character");
+		}
+	}
+}
